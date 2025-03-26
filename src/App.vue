@@ -6,6 +6,8 @@ import FooterSection from './components/section/FooterSection.vue';
 
 <template>
   <HeaderSection />
-  <RouterView />
+  <div>
+    <RouterView />
+  </div>
   <FooterSection />
 </template>

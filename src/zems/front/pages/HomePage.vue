@@ -1,3 +1,7 @@
+<script setup>
+import BannerSection from '@/components/section/BannerSection.vue';
+</script>
+
 <template>
-    <h1>homepage</h1>
+  <BannerSection />
 </template>

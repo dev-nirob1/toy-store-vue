@@ -38,6 +38,13 @@ const user = ref(true)
 
 
 <style scoped>
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
 header .logo {
   height: 60px;
 }
