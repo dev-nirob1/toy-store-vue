@@ -11,3 +11,9 @@ import FooterSection from './components/section/FooterSection.vue';
   </main>
   <FooterSection />
 </template>
+<style>
+main {
+  min-height: calc(100vh - 320px);
+  padding: 6rem 0;
+}
+</style>
