@@ -1,6 +1,8 @@
 import AboutPage from '@/zems/front/pages/AboutPage.vue'
 import ContactPage from '@/zems/front/pages/ContactPage.vue'
 import HomePage from '@/zems/front/pages/HomePage.vue'
+import LoginPage from '@/zems/front/pages/LoginPage.vue'
+import RegisterPage from '@/zems/front/pages/RegisterPage.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -22,6 +24,16 @@ const router = createRouter({
       name: 'contact',
       component: ContactPage
     },
+    {
+      path: '/login',
+      name: 'login',
+      component: LoginPage
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: RegisterPage
+    }
   ],
 })
 

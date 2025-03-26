@@ -1,5 +1,78 @@
+<script setup>
+import { ref } from 'vue';
+const isOpen = ref(true)
+const user = ref(true)
+</script>
+
 <template>
-    <header>
-        hi
-    </header>
+  <header class="bg-light relative">
+    <nav class="container flex align-center justify-between">
+      <img class="logo" src="/logo.webp" alt="logo">
+
+      <ul class="nav-items align-center justify-center">
+        <li><a href="/">Home</a></li>
+        <li><a href="/toys">Toys</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <!-- <ul v-else>
+        <li><a href="/">Home</a></li>
+        <li><a href="/toys">Toys</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul> -->
+      <div class="flex gap-1">
+        <a v-if="!user" href="/login">Login</a>
+        <img v-else src="/logo.webp" alt="" class="user-profile">
+        <div class="hamburger" @click="isOpen = !isOpen">
+          <button>
+
+          </button>
+        </div>
+      </div>
+
+
+    </nav>
+  </header>
 </template>
+
+
+<style scoped>
+header .logo {
+  height: 60px;
+}
+
+header ul {
+  list-style: none;
+}
+
+header ul li:not(:last-child) {
+  margin-right: 1rem;
+}
+
+header ul li a {
+  text-decoration: none;
+  padding: .5rem 1rem;
+}
+.nav-items{
+  display: none;
+}
+.user-profile {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+}
+
+.hamburger {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .nav-items{
+    display: flex;
+  }
+  .hamburger {
+    display: none;
+  }
+}
+</style>
