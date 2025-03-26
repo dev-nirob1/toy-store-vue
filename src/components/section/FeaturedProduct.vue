@@ -1,0 +1,3 @@
+<template>
+  featured product
+</template>

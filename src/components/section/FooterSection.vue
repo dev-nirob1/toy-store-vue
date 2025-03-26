@@ -1,11 +1,9 @@
 <template>
   <footer class="bg-light">
     <div class="container medium-2 large-4 align-center">
-      <div>
-        <figure>
-          <img style="width:120px" src="/logo.webp" alt="Toy Cars" />
-        </figure>
-      </div>
+      <figure>
+        <img style="width:120px" src="/logo.webp" alt="Toy Cars" />
+      </figure>
       <div>
         <h5>Contact Us</h5>
         <p>Email: info@toycarswebsite.com</p>

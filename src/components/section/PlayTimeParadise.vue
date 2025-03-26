@@ -1,0 +1,3 @@
+<template>
+  playtime paradise
+</template>
