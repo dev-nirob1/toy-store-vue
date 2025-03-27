@@ -1,28 +1,54 @@
-<script setup lang="ts">
+<script setup>
 import BaseButton from '@/components/element/BaseButton.vue';
+import InputField from '@/components/element/InputField.vue';
 import Title from '@/components/element/Title.vue';
+import FormComponent from '@/components/widgets/FormComponent.vue';
+import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
 
+const email = ref();
+const password = ref()
+
+const handleLogin = () => {
+  console.log('email', email.value);
+  console.log('password', password.value);
+}
 </script>
 
 <template>
-  <section class="bg-light flex">
-
+  <section class="bg-light py-2">
     <div class="form-container">
+
       <Title tag="h4">Please Login</Title>
-      <form>
+
+      <FormComponent @submit.prevent="handleLogin">
         <div>
           <label for="email">Email</label>
-          <input id="email" type="email">
+          <InputField
+          v-model="email"
+          id="email"
+          type="email"
+          placeholder="Please Enter Your Email" />
         </div>
+
         <div>
           <label for="password">Password</label>
-          <input id="password" type="password">
+          <InputField
+          v-model="password"
+          id="password"
+          type="password"
+          placeholder="Please Enter Your Password" />
         </div>
+
         <BaseButton class="width-full bg-primary">Login</BaseButton>
-      </form>
+
+      </FormComponent>
+
       <BaseButton class="width-full bg-primary">Continue with google</BaseButton>
-      <p>Don't have an account? <RouterLink to="/register">Register Now</RouterLink> </p>
+
+      <p>
+        Don't have an account? <RouterLink to="/register">Register Now</RouterLink>
+      </p>
     </div>
 
   </section>
