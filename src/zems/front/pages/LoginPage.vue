@@ -3,15 +3,22 @@ import BaseButton from '@/components/element/BaseButton.vue';
 import InputField from '@/components/element/InputField.vue';
 import Title from '@/components/element/Title.vue';
 import FormComponent from '@/components/widgets/FormComponent.vue';
+import { loginUser } from '@/plugins/firebase/firebaseAuth';
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
-
+const isLoading = ref(true);
 const email = ref();
 const password = ref()
 
-const handleLogin = () => {
-  console.log('email', email.value);
-  console.log('password', password.value);
+const handleLogin = async() => {
+  try {
+    const loggedUser = await loginUser(email.value, password.value);
+    console.log(loggedUser.user);
+    isLoading.value = false
+  } catch (error) {
+    console.log('error while login', error.message);
+    isLoading.value = false;
+  }
 }
 </script>
 

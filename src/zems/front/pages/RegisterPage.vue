@@ -3,16 +3,23 @@ import BaseButton from '@/components/element/BaseButton.vue';
 import InputField from '@/components/element/InputField.vue';
 import Title from '@/components/element/Title.vue';
 import FormComponent from '@/components/widgets/FormComponent.vue';
+import { registerUser } from '@/plugins/firebase/firebaseAuth';
 import { ref } from 'vue';
-
+const isLoading = ref(true);
 const name = ref()
 const email = ref()
 const password = ref()
 
-const handleRegister = () => {
-  console.log('name', name.value);
-  console.log('email', email.value);
-  console.log('password', password.value);
+const handleRegister = async () => {
+  try {
+    const currentUser = await registerUser(email.value, password.value)
+    console.log(currentUser.user);
+    isLoading.value = false;
+  } catch (error) {
+    console.error("Login Failed:", error.message);
+    isLoading.value = false;
+  }
+
 }
 
 </script>
