@@ -1,10 +1,12 @@
 <script setup>
 import BannerSection from '@/components/section/BannerSection.vue';
-import Newsletter from '@/components/section/Newsletter.vue';
+import FormSec from '@/components/section/FormSec.vue';
+import Newsletter from '@/components/section/NewsLetter.vue';
 import WhyChoose from '@/components/section/WhyChoose.vue';
 </script>
 
 <template>
+  <FormSec/>
   <BannerSection />
   <WhyChoose/>
   <Newsletter/>

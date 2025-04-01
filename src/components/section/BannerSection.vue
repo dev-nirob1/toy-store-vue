@@ -1,12 +1,8 @@
-<script setup lang="ts">
-import BaseButton from '../element/BaseButton.vue';
-import BaseImage from '../element/BaseImage.vue';
-import HeroTitle from '../element/HeroTitle.vue';
-import Paragraph from '../element/Paragraph.vue';
+<script setup>
 </script>
 
 <template>
-  <section class="container hero">
+    <section class="container hero">
         <div class="height-full width-full relative">
             <BaseImage image="/banner.webp"></BaseImage>
             <div class="hero-content">
@@ -14,10 +10,10 @@ import Paragraph from '../element/Paragraph.vue';
                     <HeroTitle>
                         Plant a Tree, <br> Grow a Greener Future
                     </HeroTitle>
-                    <Paragraph>
+                    <BaseParagraph>
                         Join the movement to make the world greener, one tree at a time. Discover eco-friendly trees to
                         plant in your garden, donate for reforestation, and contribute to a sustainable future.
-                    </Paragraph>
+                    </BaseParagraph>
                     <div class="flex justify-center align-center gap-1">
                         <BaseButton>
                             Learn more

@@ -1,8 +1,4 @@
 <script setup>
-import BaseButton from '@/components/element/BaseButton.vue';
-import InputField from '@/components/element/InputField.vue';
-import Title from '@/components/element/Title.vue';
-import FormComponent from '@/components/widgets/FormComponent.vue';
 import { registerUser } from '@/plugins/firebase/firebaseAuth';
 import { ref } from 'vue';
 const isLoading = ref(true);
@@ -21,15 +17,13 @@ const handleRegister = async () => {
   }
 
 }
-
 </script>
-
 
 <template>
   <section class="bg-light py-2">
     <div class="form-container">
 
-      <Title tag="h4">Please Login</Title>
+      <BaseTitle tag="h4">Please Login</BaseTitle>
 
       <FormComponent @submit.prevent="handleRegister">
         <div>

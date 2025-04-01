@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import { RouterLink } from 'vue-router';
 const isOpen = ref(true)
 const user = ref(true)
 </script>
@@ -10,10 +11,11 @@ const user = ref(true)
       <img class="logo" src="/logo.webp" alt="logo">
 
       <ul class="nav-items align-center justify-center">
-        <li><a href="/">Home</a></li>
-        <li><a href="/toys">Toys</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><RouterLink to="/">Home</RouterLink></li>
+        <li><RouterLink to="/toys">Toys</RouterLink></li>
+        <li><RouterLink to="/about/page1">About</RouterLink></li>
+        <li><RouterLink to="/about/page-2">About</RouterLink></li>
+        <li><RouterLink to="/contact">Contact</RouterLink></li>
       </ul>
       <!-- <ul v-else>
         <li><a href="/">Home</a></li>

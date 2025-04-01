@@ -1,16 +1,15 @@
 <script setup>
-import BaseButton from '@/components/element/BaseButton.vue';
-import InputField from '@/components/element/InputField.vue';
-import Title from '@/components/element/Title.vue';
-import FormComponent from '@/components/widgets/FormComponent.vue';
+
 import { loginUser } from '@/plugins/firebase/firebaseAuth';
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
 const isLoading = ref(true);
-const email = ref();
-const password = ref()
+const email = ref('');
+const password = ref('')
+const isChecked = ref(1)
 
-const handleLogin = async() => {
+const handleLogin = async () => {
+  console.log(email, password, isChecked);
   try {
     const loggedUser = await loginUser(email.value, password.value);
     console.log(loggedUser.user);
@@ -26,31 +25,27 @@ const handleLogin = async() => {
   <section class="bg-light py-2">
     <div class="form-container">
 
-      <Title tag="h4">Please Login</Title>
+      <BaseTitle tag="h4">Please Login</BaseTitle>
 
       <FormComponent @submit.prevent="handleLogin">
         <div>
           <label for="email">Email</label>
-          <InputField
-          v-model="email"
-          id="email"
-          type="email"
-          placeholder="Please Enter Your Email" />
+          <InputField v-model="email" id="email" type="email" placeholder="Please Enter Your Email" />
+          {{ email }}
         </div>
 
         <div>
           <label for="password">Password</label>
-          <InputField
-          v-model="password"
-          id="password"
-          type="password"
-          placeholder="Please Enter Your Password" />
+          <InputField v-model="password" id="password" type="password" placeholder="Please Enter Your Password" />
+          {{ password }}
+
+        </div>
+        <div class="flex">
+          <InputField v-model="isChecked" value="1" name="checkbox" id='checkbox' type="checkbox" /> remember me
         </div>
 
         <BaseButton class="width-full bg-primary">Login</BaseButton>
-
       </FormComponent>
-
       <BaseButton class="width-full bg-primary">Continue with google</BaseButton>
 
       <p>
