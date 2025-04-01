@@ -22,10 +22,10 @@
     --heading-4: 1.125rem;
     /* --heading-5: 1.125rem; */
     /* --heading-5: 1.125rem; */
-   
+
     /* box shadows  */
     --testimonials-card-shadow: 0 5px 20px 0 rgba(23, 44, 82, 0.1);
-    --blog-card-shadow: 0 5px 20px 0 rgba(23, 44, 82, 0.1);
+    --card-shadow: 0 5px 20px 0 rgba(23, 44, 82, 0.1);
 }
 
 body {

@@ -1,8 +1,8 @@
 <template>
   <footer class="bg-light">
-    <div class="container medium-2 large-4 align-center">
+    <div class="container medium-2 large-4">
       <figure>
-        <img style="width:120px" src="/logo.webp" alt="Toy Cars" />
+        <img class="width-full mt-1" src="/logo.webp" alt="Toy Cars" />
       </figure>
       <div>
         <h5>Contact Us</h5>
@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="text-center">
-      <p class="py-1">&copy; {{ new Date().getFullYear() }} Toy Store. All rights reserved.</p>
+      <p>&copy; {{ new Date().getFullYear() }} Toy Store. All rights reserved.</p>
     </div>
   </footer>
 </template>
@@ -48,5 +48,9 @@ ul {
 .social-icon img {
   height: 2rem;
   width: 2rem;
+}
+footer p {
+  margin: 0;
+  padding: 1rem 0;
 }
 </style>

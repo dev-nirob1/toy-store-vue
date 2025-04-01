@@ -1,5 +1,7 @@
 <template>
-    <h5 class="sub-title">Sub Title</h5>
+    <h5 class="sub-title">
+      <slot></slot>
+    </h5>
 </template>
 <style scoped>
 .sub-title{
