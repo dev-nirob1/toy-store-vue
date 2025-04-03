@@ -21,7 +21,7 @@ defineProps({
         <BaseParagraph>Price: ${{ product.price }}</BaseParagraph>
         <span>Ratings: {{ product.ratings }}</span>
       </div>
-      <RouterLink class="btn width-full bg-primary" to="/view-details">View Details</RouterLink>
+      <RouterLink class="btn width-full bg-primary" to="/toy-details">View Details</RouterLink>
     </div>
   </div>
 </template>

@@ -8,10 +8,10 @@ import LoginPage from '@/zems/front/pages/LoginPage.vue'
 import MyToys from '@/zems/front/pages/MyToys.vue'
 import RegisterPage from '@/zems/front/pages/RegisterPage.vue'
 import ToyDetails from '@/zems/front/pages/ToyDetails.vue'
-import { ref } from 'vue'
+// import { ref } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
-const loggedUser = ref(false)
+// const loggedUser = ref(false)
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,7 +27,7 @@ const router = createRouter({
           component: HomePage,
         },
         {
-          path: '/about/:page',
+          path: '/about',
           name: 'about',
           component: AboutPage,
           // component: () => import('../views/AboutView.vue'),
@@ -41,25 +41,25 @@ const router = createRouter({
         {
           path: '/all-toys',
           name: 'all-toys',
-          meta: { auth: 'LoggedIn' },
+          // meta: { auth: 'LoggedIn' },
           component: AllToys,
         },
         {
           path: '/toy-details',
           name: 'toy-details',
-          meta: { auth: 'LoggedIn' },
+          // meta: { auth: 'LoggedIn' },
           component: ToyDetails,
         },
         {
           path: '/add-toy',
           name: 'add-toy',
-          meta: { auth: 'LoggedIn' },
+          // meta: { auth: 'LoggedIn' },
           component: AddToy,
         },
         {
           path: '/my-toys',
           name: 'my-toy',
-          meta: { auth: 'LoggedIn' },
+          // meta: { auth: 'LoggedIn' },
           component: MyToys,
         },
         {
@@ -76,14 +76,14 @@ const router = createRouter({
     },
   ],
 })
-router.beforeEach(async (to, from, next) => {
-  console.log(to.meta.auth);
-  if(to.meta.auth === 'LoggedIn' && !loggedUser.value) {
-    alert('Please Login First')
-    next({ name: 'login' })
-  }
-  next()
-  console.log(to, from)
-})
+// router.beforeEach(async (to, from, next) => {
+//   console.log(to.meta.auth);
+//   if(to.meta.auth === 'LoggedIn' && !loggedUser.value) {
+//     alert('Please Login First')
+//     next({ name: 'login' })
+//   }
+//   next()
+//   console.log(to, from)
+// })
 
 export default router

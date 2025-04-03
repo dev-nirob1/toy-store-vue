@@ -12,7 +12,7 @@ defineProps({
 
 </script>
 <template>
-  <div class="featured-product-card text-center">
+  <div class="toy-card text-center">
     <img class="width-full" :src="product.toyImage" alt="">
     <SubTitle>{{ product.toyName }}</SubTitle>
     <BaseParagraph>${{ product.price }}</BaseParagraph>
@@ -21,16 +21,16 @@ defineProps({
 </template>
 
 <style scoped>
-.featured-product-card {
+.toy-card {
   padding: .8rem;
   border-radius: .8rem;
   box-shadow: var(--card-shadow);
 }
-.featured-product-card img {
+.toy-card img {
   height: 220px;
   border-radius: .8rem .8rem 0 0;
 }
-.featured-product-card h5{
+.toy-card h5{
   margin:10px 0;
 }
 </style>

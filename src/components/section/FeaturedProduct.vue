@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import BaseTitle from '../element/BaseTitle.vue';
-import FeaturedProductCard from '../widgets/FeaturedProductCard.vue';
+import ToyCard from '../widgets/ToyCard.vue';
 const products = ref([]);
 const loading = ref(false);
 
@@ -27,7 +27,7 @@ console.log(products);
     Featured Product
   </BaseTitle>
   <div class="medium-2 large-4 gap-1 medium-gap-2">
-    <FeaturedProductCard v-for="product in products" :product="product" :key="product._id"/>
+    <ToyCard v-for="product in products" :product="product" :key="product._id"/>
   </div>
  </div>
 </template>
