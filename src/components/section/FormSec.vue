@@ -19,7 +19,7 @@ const handleSubmit = (e) => {
     <button type="submit" @click.prevent="handleSubmit">submit</button>
   </form>
 </template>
-<style>
+<style scoped>
 form {
   max-width: 500px;
   margin: 0 auto

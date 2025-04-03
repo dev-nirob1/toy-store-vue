@@ -15,7 +15,7 @@ onMounted(async () => {
     console.log('error from all toys', error);
   }
 })
-console.log(toys);
+// console.log(toys);
 </script>
 
 <template>
