@@ -32,6 +32,11 @@ const router = createRouter({
         {
           path: '/contact',
           name: 'contact',
+          component: ContactPage,
+        },
+        {
+          path: '/toy-details',
+          name: 'toy-details',
           meta: { auth: 'LoggedIn' },
           component: ContactPage,
         },

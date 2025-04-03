@@ -14,7 +14,7 @@ defineProps({
 
 <template>
   <div class="card">
-    <BaseImage :src="product.toyImage"></BaseImage>
+    <BaseImage :image="product.toyImage"></BaseImage>
     <div class="p-1">
       <SubTitle>{{ product.toyName }}</SubTitle>
       <div class="flex justify-between align-center">
