@@ -1,0 +1,1 @@
+<template>my toys></template>

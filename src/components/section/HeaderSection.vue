@@ -12,7 +12,7 @@ const user = ref(true)
 
       <ul class="nav-items align-center justify-center">
         <li><RouterLink to="/">Home</RouterLink></li>
-        <li><RouterLink to="/toys">Toys</RouterLink></li>
+        <li><RouterLink to="/all-toys">Toys</RouterLink></li>
         <li><RouterLink to="/about/page1">About</RouterLink></li>
         <li><RouterLink to="/about/page-2">About</RouterLink></li>
         <li><RouterLink to="/contact">Contact</RouterLink></li>

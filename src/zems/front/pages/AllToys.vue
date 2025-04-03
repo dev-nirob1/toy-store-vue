@@ -1,0 +1,3 @@
+<template>
+  all toy
+</template>

@@ -1,0 +1,3 @@
+<template>
+  toy details
+  </template>
