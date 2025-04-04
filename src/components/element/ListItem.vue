@@ -1,3 +1,3 @@
 <template>
-    <li>Plant 1 Tree</li>
+    <slot></slot>
 </template>
