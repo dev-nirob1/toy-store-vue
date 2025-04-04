@@ -1,3 +1,10 @@
+<script setup>
+import SharedBanner from '@/components/widgets/SharedBanner.vue';
+
+</script>
+
 <template>
-    contact page
+   <div class="container">
+    <SharedBanner></SharedBanner>
+   </div>
 </template>
