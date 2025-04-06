@@ -9,7 +9,7 @@ const password = ref('')
 const isChecked = ref(1)
 
 const handleLogin = async () => {
-  console.log(email, password, isChecked);
+  // console.log(email, password, isChecked);
   try {
     const loggedUser = await loginUser(email.value, password.value);
     console.log(loggedUser.user);

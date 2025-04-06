@@ -10,7 +10,7 @@ onMounted(async()=>{
     const response = await fetch('https://toy-store-server-blond.vercel.app/toys/features');
     const data = await response.json()
     products.value = data;
-    console.log(data);
+    // console.log(data);
     loading.value = true;
     } catch (error) {
         console.log(error);

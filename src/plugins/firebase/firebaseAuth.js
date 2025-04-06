@@ -33,8 +33,12 @@ export const googleLogin = async () => {
   }
 }
 
-const unsubscribe = onAuthStateChanged(auth, (user) => {
-  currentUser.value = user
-  console.log(currentUser);
-})
-onUnmounted(unsubscribe)
+export const useAuth = () => {
+  const unsubscribe = onAuthStateChanged(auth, (user) => {
+    currentUser.value = user
+    console.log('User changed:', user)
+  })
+
+  onUnmounted(() => unsubscribe())
+  return { currentUser }
+}
