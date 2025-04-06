@@ -1,10 +1,13 @@
 import {
   createUserWithEmailAndPassword,
   GoogleAuthProvider,
+  onAuthStateChanged,
   signInWithEmailAndPassword,
   signInWithPopup,
 } from 'firebase/auth'
 import { auth } from './firebase.config'
+import { onUnmounted, ref } from 'vue'
+export const currentUser = ref(null)
 
 export const registerUser = async (email, password) => {
   try {
@@ -29,3 +32,9 @@ export const googleLogin = async () => {
     console.log('error while login', error)
   }
 }
+
+const unsubscribe = onAuthStateChanged(auth, (user) => {
+  currentUser.value = user
+  console.log(currentUser);
+})
+onUnmounted(unsubscribe)

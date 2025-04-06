@@ -3,6 +3,8 @@ import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
 const isOpen = ref(true)
 const user = ref(true)
+import { currentUser } from '@/plugins/firebase/firebaseAuth';
+console.log(currentUser.value?.email);
 </script>
 
 <template>
