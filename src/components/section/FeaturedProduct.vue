@@ -16,7 +16,7 @@ onMounted(async()=>{
         console.log(error);
     }
 })
-console.log(products);
+// console.log(products);
 
 
 </script>

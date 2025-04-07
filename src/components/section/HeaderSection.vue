@@ -6,13 +6,15 @@ const user = ref(true)
 
 import { useAuth } from '@/plugins/firebase/firebaseAuth';
 const {currentUser} = useAuth()
+
 console.log(currentUser.value?.email);
 watch(currentUser, (user) => {
   if (user) {
     console.log('User email:', user.email)
   }
 })
-console.log('current user Email: ',currentUser?.value?.email);
+console.log('current user Email: ',currentUser.value?.email);
+
 </script>
 
 <template>
